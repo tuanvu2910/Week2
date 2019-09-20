@@ -9,12 +9,7 @@
 
 </body>
 <script>
-    function  showyourMouse(event) {
-        let x = event.clientX;
-        let y = event.clientY;
-       let e = document.getElementById("maytinh");
-       e.style.position =
-    }
+
     function upArrowPressed() {
         let element = document.getElementById("maytinh");
         element.style.top = parseInt(element.style.top) - 50 + "px" ;
@@ -49,14 +44,21 @@
                 break;
 
 
-
+        }
+    }
+        function showyourMouse(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            let e = document.getElementById("maytinh");
+            e.style.left = x + "px";
+            e.style.right = y + "px";
         }
 
         
-    }
+
     function docReady() {
         window.addEventListener("keydown",moveSelection);
-        
+        window.addEventListener("click",showyourMouse);
     }
 
 
