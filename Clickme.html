@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<img id="Quabong" src="maytinh.png" >
+<p>Click button below to move the image to right</p>
+<input type="button" value="ClickMe"onclick="moveRight();" />
+</form>
+
+
+   <script>
+       let  imgQuabong = document.getElementById("Quabong");
+       function init() {
+           imgQuabong = document.getElementById("Quabong")
+           imgQuabong.style.position = 'relative';
+           imgQuabong.style.left = '0px';
+       }
+       function moveRight() {
+           imgQuabong.style.left = parseInt(imgQuabong.style.left) + 10 + 'px';
+       }
+       window.onload = init;
+
+
+   </script>
+</body>
+</html>
