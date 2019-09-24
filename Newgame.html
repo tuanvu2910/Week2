@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="game.css">
+
+<body >
+<table><tr><td><div class="puzzles">
+    <img id="img1"  onclick="firtChange1()" src="funny-cat1_part1x1.jpg" alt="" style="box-shadow: black 2px 3px 3px;">
+    <img id="img2" onclick="firtChange2()" src="funny-cat1_part2x1.jpg" alt="" style="box-shadow: black 2px 3px 3px;">
+    <img id="img3"onclick="firtChange3()" src="funny-cat1_part3x1.jpg" alt="" style="box-shadow: black 2px 3px 3px;">
+    <img id="img4" onclick="firtChange4()"src="monkey_part4x1.jpg" alt="" style="box-shadow: black 2px 3px 3px;">
+    <img id="img5"onclick="firtChange5()" src="monkey_part5x1.jpg" alt="" style="box-shadow: black 2px 3px 3px;">
+</div></td><td><div><button onclick="check()"> Check </button></td>
+</div ></tr>
+</table>
+</body>
+
+<script>
+    let firtsImages =  ["funny-cat1_part1x1.jpg",
+                    "monkey_part1x1.jpg",
+                    "panda_swap_part1x1.jpg",
+                    ];
+        let secoundImages =
+            ["funny-cat1_part2x1.jpg",
+                "monkey_part2x1.jpg",
+                "panda_swap_part2x1.jpg",
+            ];
+        let thirdImages =
+            ["funny-cat1_part3x1.jpg",
+                "monkey_part3x1.jpg",
+                "panda_swap_part3x1.jpg",
+            ];
+    let fourImages =
+        ["funny-cat1_part4x1.jpg",
+            "monkey_part4x1.jpg",
+            "panda_swap_part4x1.jpg",
+        ];
+    let fiveImages =
+        ["funny-cat1_part5x1.jpg",
+            "monkey_part5x1.jpg",
+            "panda_swap_part5x1.jpg",
+        ];
+
+
+
+    function  firtChange1() {
+        let random = Math.floor(Math.random() * 5);
+        let replace = document.getElementById("img1");;
+        replace.src = firtsImages[random];
+    }
+    function  firtChange2() {
+        let random = Math.floor(Math.random() * 5);
+        let replace = document.getElementById("img2");;
+        replace.src = secoundImages[random];
+    }
+    function  firtChange3() {
+        let random = Math.floor(Math.random() * 5);
+        let replace = document.getElementById("img3");;
+        replace.src = thirdImages[random];
+    }
+    function  firtChange4() {
+        let random = Math.floor(Math.random() * 5);
+        let replace = document.getElementById("img4");;
+        replace.src = fourImages[random];
+    }
+    function  firtChange5() {
+        let random = Math.floor(Math.random() * 5);
+        let replace = document.getElementById("img5");;
+        replace.src = fiveImages[random];
+    }
+    function check() {
+        let x1 = document.getElementById('img1');
+        let x2 = document.getElementById('img2');
+        let x3 = document.getElementById('img3');
+        let x4 = document.getElementById('img4');
+        let x5 = document.getElementById('img5');
+        let y1 = x1.src;
+        let y2 = x2.src;
+        let y3 = x3.src;
+        let y4 = x4.src;
+        let y5 = x5.src;
+        if (y1.includes("cat") && y2.includes("cat") && y3.includes("cat") && y4.includes("cat") && y5.includes("cat")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+        if (y1.includes("monkey") && y2.includes("monkey") && y3.includes("monkey") && y4.includes("monkey") && y5.includes("monkey")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+        if (y1.includes("panda") && y2.includes("panda") && y3.includes("panda") && y4.includes("panda") && y5.includes("panda")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+    }
+    </script>
+
+</body>
+</html>
