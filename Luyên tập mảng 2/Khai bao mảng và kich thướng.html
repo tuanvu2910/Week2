@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset><legend>Khai báo mảng ,kích thướng </legend>
+<input type="text" id="kytu"> <button onclick="upvaomang()">Up</button>
+    <button onclick="sokytu()">Sô kí tự</button>
+    <input id="dis" type="text" disabled>
+
+
+</fieldset>
+<script>
+
+    let mang = [];
+    let mang2 = [];
+    function upvaomang() {
+        let b = document.getElementById("kytu").value;
+            mang.push(b);
+        document.getElementById("kytu").value="";
+    }
+    function sokytu() {
+        let count =0;
+        let d = mang.join("");
+
+        for(let  i =0; i <d.length;i++){
+            if(!isNaN(d[i])){
+
+                count++;
+            }
+        }
+        document.getElementById("dis").value = count;
+
+    }
+</script>
+</body>
+</html>
